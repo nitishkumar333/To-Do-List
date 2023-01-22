@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #6c8176;
+    min-height: 100vh;
+    font-family: 'Poppins', Courier, monospace;
+}
+.mainContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: red; */
+}
+.border{
+    display: inline-block;
+    /* background-color: blue; */
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 20vh;
+}
+form{
+    /* min-height: 10vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    text-shadow: 2px 2px 5px black;
+    color: white;
+    font-size: 4rem;
+}
+form button,form input{
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    outline: none;
+}
+form button{
+    color: #4c5c54;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+form input:focus{
+    border: none;
+}
+form button:hover{
+    background-color: #39443e;
+    color: white;
+}
+.todo-list{
+    display: flex;
+    flex-direction: column-reverse;
+    font-size: 1.8rem;
+    /* margin: 10px 0; */
+}
+.todo{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    background-color: bisque;
+    transition: all 0.5s ease;
+}
+.todo-item{
+    padding: 0.4rem;
+    flex: 1;
+    list-style: none;
+}
+.todo-input{
+    font-family: 'Times New Roman', Times, serif;
+}
+.todo button{
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+}
+.complete-btn{
+    color: white;
+    background-color: rgb(73, 204, 73);
+}
+/* .complete-btn:focus{
+    background-color: rgb(35, 149, 35);;
+} */
+.trash-btn{
+    color: white;
+    background-color: #ff0000;
+}
+.fa-trash,.fa-check{
+    pointer-events: none;
+}
+.completed{
+    text-decoration: line-through;
+    color: #6c8176;
+    opacity: 0.7;
+}
+.fall{
+    transform: translateY(8rem);
+    opacity: 0;
+}
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    outline: none;
+}
+.select{
+    margin-left: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+select{
+    color: #39443e;
+    width: 10rem;
+    padding: 1.19rem;
+    cursor: pointer;
+}
+.select::after{
+    content: "\25BC";
+    position: absolute;
+    background: #39443e;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.select:hover::after{
+    background-color: rgb(49, 49, 49);
+    color: white;
+}
